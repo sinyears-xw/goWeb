@@ -1,0 +1,5 @@
+port: 1234
+ethereum:
+  url: "http://118.31.0.68:7171"
+#  url: "http://localhost:7171"
+  ks: "/root/blockchain/data/keystore"

@@ -1,0 +1,13 @@
+httpServer: "http://127.0.0.1"
+httpPort: ":4321"
+mysql:
+#  url: "root:gooal.2y@tcp(172.168.1.201:3306)/test?charset=utf8&parseTime=True&loc=Local"
+postgres:
+#  url: "host=172.168.1.201 user=postgres dbname=test sslmode=disable password=a81823565"
+#ethereum:
+#  passwd: "123456"
+#  url: "http://172.168.1.201:8550"
+watchDirectory: "E:\\test"
+filterToken: false
+jwtSecret: "jlzwofajOWUNNVX.1sfsf?__1231$%%lsJLJV!!!..^jfls&&wfll!ffj~WRVXVX"
+privateKey: "cc2f74c155ab8b1fcc09a200e7e5277dac6a87b361c41e6eceb35bf1f791db3a"
