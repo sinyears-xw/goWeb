@@ -39,7 +39,9 @@ var EthPrivateKey *ecdsa.PrivateKey
 var EthAddress common.Address
 var ChainId *big.Int
 var EthNilAddress = [common.AddressLength]byte{}
+
 const MaxEthTransBuf = 1024
+
 var EthClient *ethclient.Client = nil
 
 //Logurus
@@ -193,7 +195,7 @@ func initFileWatchTest() {
 			panic(err)
 		}
 
-		err = fileWatcherTest.WatchFlags(watchDir, fsnotify.FSN_CREATE |  fsnotify.FSN_MODIFY)
+		err = fileWatcherTest.WatchFlags(watchDir, fsnotify.FSN_CREATE|fsnotify.FSN_MODIFY)
 		if err != nil {
 			panic(err)
 		}
@@ -204,11 +206,12 @@ func initFileWatchTest() {
 				case ev := <-fileWatcherTest.Event:
 					fileWatcher.ProcessCreate(ev)
 				case err := <-fileWatcherTest.Error:
-					logrus.Println("error:", err)
+					if err != nil {
+						logrus.Println("error:", err)
+					}
 				}
 			}
 		}()
 	}
-
 
 }
