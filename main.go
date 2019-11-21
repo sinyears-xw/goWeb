@@ -1,13 +1,19 @@
 package main
 
 import (
+	"fmt"
 	_ "goweb/httpRest/router"
-	"goweb/mem"
 )
 
 func main() {
-	mem.Wg.Wait()
-
+	var a string = "2b237ab94d384666a15ad9341cac87e7"
+	b := make([]rune, len(a))
+	for i := 0; i < len(a); i++ {
+		b[i] = '0'
+	}
+	fmt.Println(string(b))
+	//mem.Wg.Wait()
+	//util.Test()
 	//test()
 	//token, err := util.SignJwt("xw","xw",60, "")
 	//if err == nil {
